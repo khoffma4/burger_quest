@@ -1,4 +1,6 @@
 BurgerQuest::Application.routes.draw do
+  resources :reviews
+
   resources :burgers
 
   resources :restaurants
