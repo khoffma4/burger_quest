@@ -1,4 +1,6 @@
 BurgerQuest::Application.routes.draw do
+  resources :burgers
+
   resources :restaurants
 
   # The priority is based upon order of creation:
