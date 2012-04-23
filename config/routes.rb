@@ -2,12 +2,11 @@ BurgerQuest::Application.routes.draw do
   devise_for :users
 
   resources :locations
-
   resources :reviews
-
   resources :burgers
-
   resources :restaurants
+  
+  root :to => "burgers#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
