@@ -1,4 +1,9 @@
-<h1>New burger</h1>
+<% if @burger.restaurant %>
+	<h1>New burger for <%= @burger.restaurant.name %></h1>
+<% else %>
+	<h1>New Burger</h1>
+<% end %>	
+
 
 <%= render 'form' %>
 

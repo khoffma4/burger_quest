@@ -1,5 +1,6 @@
-<%= form_for(@restaurant) do |f| %>
-  <% if @restaurant.errors.any? %>
+<%= form_for(@restaurant, :html => {:multipart => true}) do |f| %>
+  
+<% if @restaurant.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@restaurant.errors.count, "error") %> prohibited this restaurant from being saved:</h2>
 
@@ -19,6 +20,23 @@
     <%= f.label :description %><br />
     <%= f.text_area :description %>
   </div>
+
+	<%= f.fields_for :locations do |l| %>
+		<fieldset>
+			<%= l.label :street %>
+			<%= l.text_field :street %>
+	
+			<%= l.label :city %>
+			<%= l.text_field :city %>
+	
+			<%= l.label :state %>
+			<%= l.text_field :state %>
+	
+			<%= l.label :zip %>
+			<%= l.text_field :zip %>
+		</fieldset>
+	 <% end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>

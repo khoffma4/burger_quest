@@ -25,6 +25,7 @@ class RestaurantsController < ApplicationController
   # GET /restaurants/new.json
   def new
     @restaurant = Restaurant.new
+    @location = @restaurant.locations.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,6 +42,9 @@ class RestaurantsController < ApplicationController
   # POST /restaurants.json
   def create
     @restaurant = Restaurant.new(params[:restaurant])
+    # params[:locations].each do |location|
+    #   @restaurant.locations.new(location.last).save!
+    # end  
 
     respond_to do |format|
       if @restaurant.save

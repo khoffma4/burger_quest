@@ -25,6 +25,7 @@ class BurgersController < ApplicationController
   # GET /burgers/new.json
   def new
     @burger = Burger.new
+    @burger.restaurant = Restaurant.find_by_id(params[:restaurant_id])
 
     respond_to do |format|
       format.html # new.html.erb

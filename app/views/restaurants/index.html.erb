@@ -11,11 +11,8 @@
 
 <% @restaurants.each do |restaurant| %>
   <tr>
-    <td><%= restaurant.name %></td>
+    <td><%= link_to restaurant.name, restaurant_url(restaurant) %></td>
     <td><%= restaurant.description %></td>
-    <td><%= link_to 'Show', restaurant %></td>
-    <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
-    <td><%= link_to 'Destroy', restaurant, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>

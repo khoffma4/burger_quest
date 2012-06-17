@@ -19,6 +19,15 @@
     <%= f.label :description %><br />
     <%= f.text_area :description %>
   </div>
+
+	<% if @burger.restaurant %>
+		<%= f.hidden_field :restaurant_id %>
+	<% else %>
+		<div class="field">
+			<%= f.label :restaurant_id %>
+			<%= f.collection_select :restaurant_id, Restaurant.all, :id, :name, { :prompt => "Choose a Restaurant" } %>
+		</div>
+	<% end %>
   <div class="actions">
     <%= f.submit %>
   </div>
