@@ -8,6 +8,27 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require reset
  *= require_self
- *= require_tree .
 */
+
+body {background: #EFEFEF}
+header {width: 96%; height:60px; background-color:#3F5765; padding: 2% }
+#container {}
+a {color: #FF530D; text-decoration:none}
+* {color: #2B3A42}
+
+div#logo {color:#fff; font-size:1.5em}
+h2 {color:#fff; font-size:1.2em}
+
+#sidebar {width: 130px; height:100%; float:left; padding:5px 0px 5px 5px}
+#main {width: 750px; padding:5px; float:left; margin:5px}
+
+.well {background: #BDD4DE; padding:5px; border-radius:4px}
+
+.user_menu {float:right, color: #fff}
+.user_menu li {float:right; margin:5px}
+
+
+ul
+li {line-height:30px}

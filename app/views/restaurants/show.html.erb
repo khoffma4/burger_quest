@@ -14,22 +14,23 @@
 	<b>Locations</b>
 
 	<% @restaurant.locations.each do |location| %>
-	<%= location.street %>
-	<%= location.city %>
-	<%= location.state %>
-	<%= location.zip %>
+		<%= location.street %>
+		<%= location.city %>
+		<%= location.state %>
+		<%= location.zip %>
 	<% end %>
 	
 <%= link_to 'Edit', edit_restaurant_path %>
 <%= link_to 'All Restaurants', restaurants_url %>
 
-<% @restaurant.burgers.each do |burger| %>
-	<ul>
-		<li><%= link_to burger.name, burger_url(burger) %> 
-			</br>
-			<%= burger.description %>
-		</li>
-<% end %>
+<ul>
+	<% @restaurant.burgers.each do |burger| %>
+			<li><%= link_to burger.name, burger_url(burger) %> 
+				</br>
+				<%= burger.description %>
+			</li>
+	<% end %>
+</ul>
 
 <%= link_to "Add a Burger", new_burger_url(:restaurant_id => @restaurant.id) %>
 
