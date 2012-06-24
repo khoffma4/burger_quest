@@ -34,4 +34,6 @@
 
 <%= link_to "Add a Burger", new_burger_url(:restaurant_id => @restaurant.id) %>
 
-	
+<%= gmaps( markers: { data: @locations }, map_options: { auto_adjust: true, auto_zoom: false, zoom: 15 }) %>
+
+<%= yield :scripts %>
