@@ -1,22 +1,16 @@
 <h1>Listing restaurants</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<ul class="restaurant-list">
+	<% @restaurants.each do |restaurant| %>
 
-<% @restaurants.each do |restaurant| %>
-  <tr>
-    <td><%= link_to restaurant.name, restaurant_url(restaurant) %></td>
-    <td><%= restaurant.description %></td>
-  </tr>
-<% end %>
-</table>
+    <li><%= link_to restaurant.name, restaurant_url(restaurant) %></li>
 
+	<% end %>
+</ul>
 <br />
 
-<%= link_to 'New Restaurant', new_restaurant_path %>
+<%#= link_to 'New Restaurant', new_restaurant_path %>
+
+<%= gmaps4rails(@locations) %>
+
+<%= yield :scripts %>

@@ -24,7 +24,8 @@ kaijo.reviews.create( user_id: test.id, title: "Amazing Burger", rating: 9, cont
 kaijo.reviews.create( user_id: test2.id, title: "Take it or leave it", rating: 4, content:"I wasn\'t very impressed. My burger was overcooked and just did not tast that good.  I wouldn\'t go out of my way to come here again.")
 
 
-
+kuma.locations.create(street: "2900 W. Belmont Ave.", city: "Chicago", state: "IL", zip: "60618")
+grange.locations.create(street: "844 W. Randolph St.", city: "Chicago", state: "IL", zip: "60607")
 
 
 
