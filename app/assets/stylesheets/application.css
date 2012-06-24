@@ -10,6 +10,7 @@
  *
  *= require reset
  *= require_self
+ *= require gmaps4rails
 */
 
 body {background: #EFEFEF}
