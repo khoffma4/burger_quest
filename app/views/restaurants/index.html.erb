@@ -11,6 +11,8 @@
 
 <%#= link_to 'New Restaurant', new_restaurant_path %>
 
-<%= gmaps4rails(@locations) %>
+<div class="large_map">
+	<%= gmaps4rails(@locations) %>
+</div>
 
 <%= yield :scripts %>
